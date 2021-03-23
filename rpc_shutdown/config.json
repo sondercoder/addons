@@ -31,7 +31,7 @@
         "address": "str",
         "credentials": "match(^[^%]*(?:%[^%]*)?$)",
         "delay": "int(0,7200)?",
-        "message": "str?"
+        "message": "str?",
         "abort": "str?"
       }
     ]

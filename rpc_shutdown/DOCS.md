@@ -31,6 +31,10 @@ computers:
     credentials: user%password
     delay: 0
     message: Home Assistant is shutting down this PC. This cannot be canceled. Please save your work!
+  - alias: test-pc-2-abort
+    address: 192.168.0.2
+    credentials: user%password
+    abort: true
 ```
 
 ### Option: `computers` (required)
@@ -57,6 +61,10 @@ A delay (in seconds) before shutting down the computer. This gives a user that h
 ### Option:  `computers.message` (optional)
 
 Show a custom message on the screen of the computer that will be shutdown.
+
+### Option:  `computers.abort` (optional)
+
+If set to 'true' will abort shutdown if delay time hasn't elapsed.
 
 ## Home Assistant configuration
 

@@ -1,6 +1,6 @@
 {
   "name": "RPC Shutdown",
-  "version": "2.2",
+  "version": "2.3",
   "slug": "rpc_shutdown",
   "description": "Shutdown Windows machines remotely",
   "url": "https://github.com/home-assistant/hassio-addons/tree/master/rpc_shutdown",
@@ -17,6 +17,11 @@
         "delay": 0,
         "message": "Home Assistant is shutting down this PC. This cannot be canceled. Please save your work!"
       }
+      {
+        "alias": "test-pc-abort",
+        "address": "192.168.0.1",
+        "credentials": "user%password",
+      }      
     ]
   },
   "schema": {
@@ -25,8 +30,9 @@
         "alias": "match(^[\\w-]*$)",
         "address": "str",
         "credentials": "match(^[^%]*(?:%[^%]*)?$)",
-        "delay": "int(0,600)?",
+        "delay": "int(0,7200)?",
         "message": "str?"
+        "abort": "str?"
       }
     ]
   },

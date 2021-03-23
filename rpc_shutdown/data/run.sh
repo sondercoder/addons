@@ -29,7 +29,7 @@ while read -r input; do
         if bashio::var.equals "$ABORT" "true"; then
             bashio::log.info "Abort $input -> $ADDRESS"
             if ! msg="$(net rpc abortshutdown -I "$ADDRESS" -U "$CREDENTIALS")"; then
-                bashio::log.error "Shutdown fails -> $msg"
+                bashio::log.error "Shutdown about failed -> $msg"
         else
         bashio::log.info "Shutdown $input -> $ADDRESS"
         if ! msg="$(net rpc shutdown -I "$ADDRESS" -U "$CREDENTIALS" -t "$DELAY" -C "$MESSAGE")"; then

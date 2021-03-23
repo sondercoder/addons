@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3
+
+- Added option to abort shutdown, only if shutdown timer has not elapsed
+- Extened delay from 10 minutes to 2 hours
+
+
 ## 2.2
 
 - Set delay to zero when it is empty (to not break existing configurations) (bugfix)

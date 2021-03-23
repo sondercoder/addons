@@ -21,6 +21,7 @@
         "alias": "test-pc-abort",
         "address": "192.168.0.1",
         "credentials": "user%password",
+        "abort": "true"
       }      
     ]
   },
